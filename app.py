@@ -7,7 +7,7 @@ model_path = 'final_model.pkl'
 loaded_model = joblib.load(model_path)
 
 # Streamlit 界面代码
-st.title("Patient IH Prediction")
+st.title("Patient ICH Prediction")
 
 # 创建输入表单布局
 col1, col2 = st.columns(2)
@@ -65,5 +65,5 @@ input_df.rename(columns=feature_name_mapping, inplace=True)
 # 进行预测
 if st.button('Predict'):
     prediction_prob = loaded_model.predict_proba(input_df)[0, 1]
-    prediction_text = f"Based on feature values, predicted probability of IH is {prediction_prob * 100:.2f}%"
+    prediction_text = f"Based on feature values, predicted probability of ICH is {prediction_prob * 100:.2f}%"
     st.markdown(f'<p style="font-size:45px; font-weight: bold;">{prediction_text}</p>', unsafe_allow_html=True)
