@@ -57,7 +57,7 @@ feature_name_mapping = {
 }
 
 # Streamlit 应用程序接口
-st.title("Stroke Outcome Prediction")
+# st.title("Stroke Outcome Prediction")
 
 st.markdown("""
 <style>
@@ -113,6 +113,6 @@ input_df = input_df[original_feature_names]
 # 进行预测
 if st.button('Predict'):
     prediction_prob = loaded_model.predict_proba(input_df)[0, 1]
-    prediction_text = f"Based on feature values, predicted probability of outcome is {prediction_prob * 100:.2f}%"
+    prediction_text = f"Based on feature values, predicted probability of ICH is {prediction_prob * 100:.2f}%"
     st.markdown(f'<p style="font-size:45px; font-weight: bold;">{prediction_text}</p>', unsafe_allow_html=True)
 
