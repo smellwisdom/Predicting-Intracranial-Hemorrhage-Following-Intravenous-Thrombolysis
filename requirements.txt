@@ -1,6 +1,8 @@
+setuptools
+wheel
 streamlit==1.34.0
 scikit-learn==1.3.2
 joblib==1.4.2
 shap==0.42.1
 pandas==1.4.4
-numpy==1.22.4
+https://files.pythonhosted.org/packages/68/46/3e2462a6364d4be189474f6a6bc403c89f81cc5f368ebd363c89bc51fe69/numpy-1.21.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
